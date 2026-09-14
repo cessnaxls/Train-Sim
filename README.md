@@ -1,53 +1,41 @@
-# WorldRail Simulator
+# WorldRail Simulator v5 — Enhanced 3D
 
-An iPad-first, browser-based railway route designer and physics simulator.
+An iPad-first railway engineering and driving simulator.
 
-## Features
-- Worldwide Leaflet + OpenStreetMap route drawing
-- Station placement and naming
-- Above-ground and subway modes
-- Electric/diesel train engineering
-- Real consist mass, passenger capacity, loading, tractive effort, braking and speed limits
-- Worldwide terrain sampling through Open-Meteo elevation data
-- Physics model using power-limited/adhesion-limited traction, Davis resistance, aerodynamic drag, grade force, service/emergency braking, and regenerative/dynamic braking
-- Touch-first power/brake levers for iPad
-- Procedural animated cab/track graphics with no proprietary game assets
+## Visual overhaul
 
-## Run locally
-```bash
-npm install
-npm run dev
-```
+This build replaces the earlier developer-art renderer with a denser Three.js world aimed at an OpenBVE-style simulator presentation:
+
+- procedural ballast, grass, concrete and metal textures
+- physically lit rails, sleepers and trackbed
+- realistic track gauge proportions
+- atmospheric sky, exponential distance fog and ACES tone mapping
+- soft dynamic sunlight/shadows
+- trackside procedural trees and buildings
+- detailed stations with tactile edge strips, canopies, benches, lights and signs
+- three-aspect signals
+- tunnel shell, structural rings, invert and tunnel lighting
+- electric catenary masts and contact wire
+- reshaped multi-car train with curved roof profile, doors, windows, bogies, wheels, nose, windshield and headlights
+- rebuilt 3D cab with dashboard, displays, pillars, sill and controls
+- cab / chase / drone cameras
 
 ## Deploy to Render
-This repo includes `render.yaml`. Create a new Render Blueprint or Static Site from the GitHub repo.
 
-Manual settings:
-- Build command: `npm ci && npm run build`
-- Publish directory: `dist`
+Build command:
+
+```bash
+npm install && npm run build
+```
+
+Publish directory:
+
+```text
+dist
+```
+
+`render.yaml` is included.
 
 ## Notes
-- OpenStreetMap tiles require attribution and usage consistent with the OSM tile policy.
-- Open-Meteo elevation data is based on Copernicus DEM GLO-90. Review attribution/licensing before commercial release.
-- The simulator is intended as an engineering game, not certified railway training software.
 
-## v4 — genuine 3D renderer
-
-WorldRail now uses Three.js/WebGL for the train builder and driving world. The map editor remains Leaflet by design; the engineered centerline it produces is converted into the 3D track you drive.
-
-### 3D systems
-- procedural standard-gauge rail geometry following the engineered centerline
-- instanced sleepers for iPad performance
-- ballast/roadbed and terrain corridor
-- subway tunnel tube geometry
-- station platforms, canopies and station-name signs
-- lineside signals
-- overhead catenary poles/wire for surface electric trains
-- procedural locomotive/passenger-car consist with wheels, windows, lights and custom livery colors
-- live rotating 3D train preview in the engineering screen
-- cab, chase and drone cameras while driving
-- cab geometry mounted to the first-person camera
-- real route elevation applied to the 3D alignment when elevation data is loaded
-
-### Performance
-The renderer caps pixel ratio and uses instancing for sleepers to keep the scene practical on iPad Safari. Long routes are resampled before mesh generation.
+The world remains procedurally generated so it can work on arbitrary routes anywhere in the world without requiring a handcrafted asset pack for every city. For true Train Sim World-level photorealism, the next step would be streamed geographic/building/terrain datasets plus authored GLTF train/cab assets and PBR texture packs.
