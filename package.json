@@ -1,21 +1,16 @@
 {
-  "name": "worldrail-sim",
-  "private": true,
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite --host 0.0.0.0",
-    "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0",
-    "start": "node server.js"
+  "name":"worldrail-asset-edition",
+  "private":true,
+  "version":"1.0.0",
+  "type":"module",
+  "scripts":{"dev":"vite --host 0.0.0.0","build":"vite build","start":"vite --host 0.0.0.0 --port ${PORT:-10000}"},
+  "dependencies":{
+    "@vitejs/plugin-react":"latest",
+    "vite":"latest",
+    "react":"latest",
+    "react-dom":"latest",
+    "three":"^0.180.0",
+    "leaflet":"^1.9.4"
   },
-  "dependencies": {
-    "vite": "^7.1.0",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "leaflet": "^1.9.4",
-    "three": "^0.180.0",
-    "express": "^5.1.0",
-    "3d-tiles-renderer": "^0.5.2"
-  }
+  "devDependencies":{}
 }

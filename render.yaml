@@ -1,11 +1,6 @@
 services:
   - type: web
-    runtime: node
-    name: worldrail-sim
+    name: worldrail-asset-edition
+    runtime: static
     buildCommand: npm install && npm run build
-    startCommand: npm start
-    envVars:
-      - key: NODE_VERSION
-        value: 22
-      - key: GOOGLE_MAP_TILES_API_KEY
-        sync: false
+    staticPublishPath: ./dist
