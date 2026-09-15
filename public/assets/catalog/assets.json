@@ -1,0 +1,64 @@
+{
+  "textures": [
+    {
+      "id": "ballast",
+      "file": "/assets/textures/ballast.jpg",
+      "license": "Bundled original"
+    },
+    {
+      "id": "concrete",
+      "file": "/assets/textures/concrete.jpg",
+      "license": "Bundled original"
+    },
+    {
+      "id": "grass",
+      "file": "/assets/textures/grass.jpg",
+      "license": "Bundled original"
+    },
+    {
+      "id": "brick",
+      "file": "/assets/textures/brick.jpg",
+      "license": "Bundled original"
+    },
+    {
+      "id": "wood",
+      "file": "/assets/textures/wood.jpg",
+      "license": "Bundled original"
+    },
+    {
+      "id": "asphalt",
+      "file": "/assets/textures/asphalt.jpg",
+      "license": "Bundled original"
+    }
+  ],
+  "models": [
+    {
+      "id": "rail-profile",
+      "type": "reusable scene asset"
+    },
+    {
+      "id": "concrete-tie",
+      "type": "reusable scene asset"
+    },
+    {
+      "id": "modular-platform",
+      "type": "reusable scene asset"
+    },
+    {
+      "id": "3-aspect-signal",
+      "type": "reusable scene asset"
+    },
+    {
+      "id": "commuter-train",
+      "type": "reusable scene asset"
+    },
+    {
+      "id": "building",
+      "type": "reusable scene asset"
+    },
+    {
+      "id": "deciduous-tree",
+      "type": "reusable scene asset"
+    }
+  ]
+}

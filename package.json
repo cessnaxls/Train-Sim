@@ -1,16 +1,1 @@
-{
-  "name":"worldrail-asset-edition",
-  "private":true,
-  "version":"1.0.0",
-  "type":"module",
-  "scripts":{"dev":"vite --host 0.0.0.0","build":"vite build","start":"vite --host 0.0.0.0 --port ${PORT:-10000}"},
-  "dependencies":{
-    "@vitejs/plugin-react":"latest",
-    "vite":"latest",
-    "react":"latest",
-    "react-dom":"latest",
-    "three":"^0.180.0",
-    "leaflet":"^1.9.4"
-  },
-  "devDependencies":{}
-}
+{"name":"worldrail-selfcontained","private":true,"version":"2.0.0","type":"module","scripts":{"dev":"vite --host 0.0.0.0","build":"vite build","start":"vite --host 0.0.0.0 --port ${PORT:-10000}"},"dependencies":{"@vitejs/plugin-react":"latest","vite":"latest","react":"latest","react-dom":"latest","three":"^0.180.0","leaflet":"^1.9.4"}}

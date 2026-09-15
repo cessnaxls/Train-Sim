@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: worldrail-asset-edition
+    name: worldrail-selfcontained
     runtime: static
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
