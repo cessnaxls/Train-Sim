@@ -6,13 +6,16 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0"
+    "preview": "vite preview --host 0.0.0.0",
+    "start": "node server.js"
   },
   "dependencies": {
     "vite": "^7.1.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "leaflet": "^1.9.4",
-    "three": "^0.180.0"
+    "three": "^0.180.0",
+    "express": "^5.1.0",
+    "3d-tiles-renderer": "^0.5.2"
   }
 }
